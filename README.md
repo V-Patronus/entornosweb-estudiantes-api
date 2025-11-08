@@ -1,3 +1,83 @@
+## 📘 Ejemplo de lista de estudiantes
+
+A continuación se muestra un ejemplo de datos que puedes usar para pruebas en la API. Estos los debe inlcuir en el json que se encuentra en la carpeta 📁 database:
+
+```json
+[
+  {
+    "id": 1,
+    "nombre": "Mariana",
+    "apellido": "Ruiz",
+    "edad": 19
+  },
+  {
+    "id": 2,
+    "nombre": "Javier",
+    "apellido": "Pérez",
+    "edad": 23
+  },
+  {
+    "id": 3,
+    "nombre": "Daniela",
+    "apellido": "Cruz",
+    "edad": 21
+  },
+  {
+    "id": 4,
+    "nombre": "Fernando",
+    "apellido": "Navarro",
+    "edad": 27
+  },
+  {
+    "id": 5,
+    "nombre": "Isabella",
+    "apellido": "Mendoza",
+    "edad": 20
+  },
+  {
+    "id": 6,
+    "nombre": "Santiago",
+    "apellido": "Ramos",
+    "edad": 22
+  },
+  {
+    "id": 7,
+    "nombre": "Gabriela",
+    "apellido": "León",
+    "edad": 25
+  },
+  {
+    "id": 8,
+    "nombre": "Ricardo",
+    "apellido": "Flores",
+    "edad": 24
+  },
+  {
+    "id": 9,
+    "nombre": "Camilo",
+    "apellido": "Morales",
+    "edad": 26
+  },
+  {
+    "id": 10,
+    "nombre": "Valentina",
+    "apellido": "Ortega",
+    "edad": 18
+  }
+]
+
+
+## 📋 Validaciones del recurso `/estudiantes`
+
+A continuación se muestran algunos ejemplos de solicitudes con errores comunes y las respuestas esperadas del API:
+
+| Método    | URL              | Body (JSON)                                      | Respuesta esperada                     |
+| ---------- | ---------------- | ------------------------------------------------ | -------------------------------------- |
+| **POST**   | `/estudiantes`   | `{"nombre":"Ana","apellido":"Gómez","edad":130}` | **400** – *edad máxima 120*            |
+| **PUT**    | `/estudiantes/1` | `{"nombre":"Luis"}`                              | **400** – *faltan campos obligatorios* |
+| **PATCH**  | `/estudiantes/1` | `{"edad":4}`                                     | **400** – *edad mínima 5*              |
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
